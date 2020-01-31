@@ -12,6 +12,6 @@ void loop()
   if (buttonState == 1) {
     digitalWrite(led, 0); // LED Turn off
   } else {
-    digitalWrite(led, 1); // ไฟ LED Turn on one
+    digitalWrite(led, 1); // LED Turn on one
   }
 }
