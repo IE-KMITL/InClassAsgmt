@@ -1,25 +1,14 @@
-int LED = D5;    
-int buttonPin = D8;   
-bool buttonState = 0;      
-bool Mode = 0;            
+#define LED_BUILTIN D5
 
-void setup()
-{
-  pinMode(buttonPin, INPUT);    
-  pinMode(LED , OUTPUT);
+void setup() {
+  
+  pinMode(LED_BUILTIN, OUTPUT);
 }
 
-void loop()
-{
-  if (digitalRead(buttonPin)) 
-  {
-    if (!buttonState) 
-    {
-      buttonState = true;
-      Mode = !Mode; 
-    }
-  }
-  else buttonState = false;
-  digitalWrite(LED , Mode); 
-  delay(5);
+
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);  
+  delay(1000);                       
+  digitalWrite(LED_BUILTIN, LOW);    
+  delay(200);                       
 }
